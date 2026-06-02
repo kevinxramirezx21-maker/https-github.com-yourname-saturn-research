@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saturn Research • Crypto Intelligence</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">🪐 Saturn Research</div>
+    <div class="nav-links">
+      <a href="#" onclick="switchTab(0)">Scanner</a>
+      <a href="#" onclick="switchTab(1)">Top Picks</a>
+      <a href="#" onclick="switchTab(2)">Token Deep Dive</a>
+      <a href="#" onclick="switchTab(3)">News</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Scanner Tab -->
+    <div id="tab-0" class="tab active">
+      <h1>AI-Powered Gem Scanner</h1>
+      <input type="text" id="search" placeholder="Search tokens or paste contract..." onkeyup="filterTokens()">
+      <button onclick="runFullScan()" class="scan-btn">🚀 Run Full Saturn Scan</button>
+      <div id="results" class="grid"></div>
+    </div>
+
+    <!-- Top Picks -->
+    <div id="tab-1" class="tab">
+      <h1>Top 20 Upside Picks <span class="badge">Updated Live</span></h1>
+      <div id="top-picks" class="grid"></div>
+    </div>
+
+    <!-- Token Deep Dive -->
+    <div id="tab-2" class="tab">
+      <h1>Token Intelligence Center</h1>
+      <div id="deep-dive"></div>
+    </div>
+
+    <!-- News -->
+    <div id="tab-3" class="tab">
+      <h1>News Aggregator</h1>
+      <div id="news-feed"></div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/scanner.js"></script>
+</body>
+</html>
