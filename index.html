@@ -11,38 +11,39 @@
   <div class="navbar">
     <div class="logo">🪐 Saturn Research</div>
     <div class="nav-links">
-      <a href="#" onclick="switchTab(0)">Scanner</a>
-      <a href="#" onclick="switchTab(1)">Top Picks</a>
-      <a href="#" onclick="switchTab(2)">Token Deep Dive</a>
-      <a href="#" onclick="switchTab(3)">News</a>
+      <a href="#" onclick="switchTab(0)"><i class="fas fa-search"></i> Scanner</a>
+      <a href="#" onclick="switchTab(1)"><i class="fas fa-trophy"></i> Top Picks</a>
+      <a href="#" onclick="switchTab(2)"><i class="fas fa-chart-bar"></i> Deep Dive</a>
+      <a href="#" onclick="switchTab(3)"><i class="fas fa-newspaper"></i> News</a>
     </div>
   </div>
 
   <div class="container">
-    <!-- Scanner Tab -->
+    <!-- Scanner -->
     <div id="tab-0" class="tab active">
-      <h1>AI-Powered Gem Scanner</h1>
-      <input type="text" id="search" placeholder="Search tokens or paste contract..." onkeyup="filterTokens()">
-      <button onclick="runFullScan()" class="scan-btn">🚀 Run Full Saturn Scan</button>
+      <h1>🚀 AI-Powered Gem Scanner</h1>
+      <p class="subtitle">Scanning 12,000+ tokens for 5x–80x upside from lows</p>
+      <input type="text" id="search" placeholder="Search tokens or paste contract address..." onkeyup="if(event.key==='Enter') filterTokens()">
+      <button onclick="runFullScan()" class="scan-btn"><i class="fas fa-rocket"></i> Run Full Saturn Scan</button>
       <div id="results" class="grid"></div>
     </div>
 
     <!-- Top Picks -->
     <div id="tab-1" class="tab">
-      <h1>Top 20 Upside Picks <span class="badge">Updated Live</span></h1>
+      <h1>🏆 Top 20 Upside Picks <span class="badge">LIVE • AI Ranked</span></h1>
       <div id="top-picks" class="grid"></div>
     </div>
 
     <!-- Token Deep Dive -->
     <div id="tab-2" class="tab">
-      <h1>Token Intelligence Center</h1>
-      <div id="deep-dive"></div>
+      <h1>🔬 Token Intelligence Center</h1>
+      <div id="deep-dive" class="deep-dive-container"></div>
     </div>
 
     <!-- News -->
     <div id="tab-3" class="tab">
-      <h1>News Aggregator</h1>
-      <div id="news-feed"></div>
+      <h1>📰 News Aggregator</h1>
+      <div id="news-feed" class="grid"></div>
     </div>
   </div>
 
